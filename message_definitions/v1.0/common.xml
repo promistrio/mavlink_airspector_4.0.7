@@ -5232,5 +5232,12 @@
       <field type="float" name="spiral_pitch" units="m">Current.</field>
       <field type="float" name="radius" units="m">Total current.</field>
     </message>
+    <message id="11034" name="CURRENT_CIRLE_STATUS">
+      <description>Set center for circle mode</description>
+      <field type="uint32_t" name="latitude">latitude.</field>
+      <field type="uint32_t" name="longitute">longitute.</field>
+      <field type="float" name="radius">latitude.</field>
+      <field type="uint32_t" name="spiral_pitch" units="m">Current.</field>
+    </message>
   </messages>
 </mavlink>
