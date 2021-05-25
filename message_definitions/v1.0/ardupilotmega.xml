@@ -1656,5 +1656,12 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+    <message id="11033" name="SET_CIRCLE_CENTER">
+      <description>Set center for circle mode</description>
+      <field type="uint32_t" name="latitude" units="degC">Temperature.</field>
+      <field type="uint32_t" name="longitute" units="cV">Voltage.</field>
+      <field type="uint32_t" name="alt" units="cm">Current.</field>
+      <field type="float" name="radius" units="m">Total current.</field>
+    </message>
   </messages>
 </mavlink>
