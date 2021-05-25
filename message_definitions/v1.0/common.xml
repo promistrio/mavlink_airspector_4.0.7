@@ -5217,4 +5217,12 @@
       <field type="double[16]" name="distance" units="m">Distance reported by individual wheel encoders. Forward rotations increase values, reverse rotations decrease them. Not all wheels will necessarily have wheel encoders; the mapping of encoders to wheel positions must be agreed/understood by the endpoints.</field>
     </message>
   </messages>
+
+  <message id="11033" name="SET_CIRCLE_CENTER">
+      <description>Set center for circle mode</description>
+      <field type="uint32_t" name="latitude" units="degC">Temperature.</field>
+      <field type="uint32_t" name="longitute" units="cV">Voltage.</field>
+      <field type="uint32_t" name="alt" units="cm">Current.</field>
+      <field type="float" name="radius" units="m">Total current.</field>
+    </message>
 </mavlink>
