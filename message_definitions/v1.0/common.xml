@@ -5227,9 +5227,9 @@
     </message>
     <message id="11033" name="SET_CIRCLE_CENTER">
       <description>Set center for circle mode</description>
-      <field type="uint32_t" name="latitude" units="degC">Temperature.</field>
-      <field type="uint32_t" name="longitute" units="cV">Voltage.</field>
-      <field type="uint32_t" name="alt" units="cm">Current.</field>
+      <field type="uint32_t" name="latitude">latitude.</field>
+      <field type="uint32_t" name="longitute">longitute.</field>
+      <field type="float" name="spiral_pitch" units="m">Current.</field>
       <field type="float" name="radius" units="m">Total current.</field>
     </message>
   </messages>
