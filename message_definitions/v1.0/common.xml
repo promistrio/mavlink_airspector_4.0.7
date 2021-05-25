@@ -4766,6 +4766,15 @@
       <field type="uint8_t" name="breach_mitigation" enum="FENCE_MITIGATE">Active action to prevent fence breach</field>
     </message>
     <!-- MESSAGE IDs 180 - 229: Space for custom messages in individual projectname_messages.xml files -->
+    <message id="178" name="AHRS2">
+      <description>Status of secondary AHRS filter if available.</description>
+      <field type="float" name="roll" units="rad">Roll angle.</field>
+      <field type="float" name="pitch" units="rad">Pitch angle.</field>
+      <field type="float" name="yaw" units="rad">Yaw angle.</field>
+      <field type="float" name="altitude" units="m">Altitude (MSL).</field>
+      <field type="int32_t" name="lat" units="degE7">Latitude.</field>
+      <field type="int32_t" name="lng" units="degE7">Longitude.</field>
+    </message>
     <message id="230" name="ESTIMATOR_STATUS">
       <description>Estimator status message including flags, innovation test ratios and estimated accuracies. The flags message is an integer bitmask containing information on which EKF outputs are valid. See the ESTIMATOR_STATUS_FLAGS enum definition for further information. The innovation test ratios show the magnitude of the sensor innovation divided by the innovation check threshold. Under normal operation the innovation test ratios should be below 0.5 with occasional values up to 1.0. Values greater than 1.0 should be rare under normal operation and indicate that a measurement has been rejected by the filter. The user should be notified if an innovation test ratio greater than 1.0 is recorded. Notifications for values in the range between 0.5 and 1.0 should be optional and controllable by the user.</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude the number.</field>
@@ -5215,6 +5224,13 @@
       <field type="uint64_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
       <field type="uint8_t" name="count">Number of wheels reported.</field>
       <field type="double[16]" name="distance" units="m">Distance reported by individual wheel encoders. Forward rotations increase values, reverse rotations decrease them. Not all wheels will necessarily have wheel encoders; the mapping of encoders to wheel positions must be agreed/understood by the endpoints.</field>
+    </message>
+    <message id="11033" name="SET_CIRCLE_CENTER">
+      <description>Set center for circle mode</description>
+      <field type="uint32_t" name="latitude" units="degC">Temperature.</field>
+      <field type="uint32_t" name="longitute" units="cV">Voltage.</field>
+      <field type="uint32_t" name="alt" units="cm">Current.</field>
+      <field type="float" name="radius" units="m">Total current.</field>
     </message>
   </messages>
 </mavlink>

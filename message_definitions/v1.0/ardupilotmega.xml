@@ -1295,15 +1295,6 @@
       <field type="float" name="CompensationY">Motor Compensation Y.</field>
       <field type="float" name="CompensationZ">Motor Compensation Z.</field>
     </message>
-    <message id="178" name="AHRS2">
-      <description>Status of secondary AHRS filter if available.</description>
-      <field type="float" name="roll" units="rad">Roll angle.</field>
-      <field type="float" name="pitch" units="rad">Pitch angle.</field>
-      <field type="float" name="yaw" units="rad">Yaw angle.</field>
-      <field type="float" name="altitude" units="m">Altitude (MSL).</field>
-      <field type="int32_t" name="lat" units="degE7">Latitude.</field>
-      <field type="int32_t" name="lng" units="degE7">Longitude.</field>
-    </message>
     <!-- camera event message from CCB to autopilot: for image trigger events but also things like heartbeat, error, low power, full card, etc -->
     <message id="179" name="CAMERA_STATUS">
       <description>Camera Event.</description>
@@ -1655,13 +1646,6 @@
       <field type="uint16_t[4]" name="totalcurrent" units="mAh">Total current.</field>
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
-    </message>
-    <message id="11033" name="SET_CIRCLE_CENTER">
-      <description>Set center for circle mode</description>
-      <field type="uint32_t" name="latitude" units="degC">Temperature.</field>
-      <field type="uint32_t" name="longitute" units="cV">Voltage.</field>
-      <field type="uint32_t" name="alt" units="cm">Current.</field>
-      <field type="float" name="radius" units="m">Total current.</field>
     </message>
   </messages>
 </mavlink>
